@@ -24,14 +24,19 @@ citus-helm/
 
 ├── citus/
 
-│   ├── Chart.yaml          # Helm chart metadata
+│   ├── Chart.yaml # Helm chart metadata
+|
 │   ├── templates/          # Kubernetes manifest templates
+|
 │   │   ├── master-deployment.yaml
 │   │   ├── master-service.yaml
 │   │   ├── worker-deployment.yaml
 │   │   └── worker-service.yaml
+|   |
 │   └── values.yaml         # Default configuration values
+|
 └── init_database.sql       # SQL script for database initialization and sharding
+|
 └── README.md
 
 
