@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citus-master
+  labels:
+    app: citus
+    role: master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: citus
+      role: master
+  template:
+    metadata:
+      labels:
+        app: citus
+        role: master
+    spec:
+      containers:
+        - name: citus-master
+          image: {{ .Values.master.image }}
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "{{ .Values.master.password }}"

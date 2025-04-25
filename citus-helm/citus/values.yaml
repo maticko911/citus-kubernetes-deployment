@@ -1,0 +1,21 @@
+master:
+  password: "test123"
+  image: "citusdata/citus:13.0.1"
+
+worker:
+  replicas: 2
+  password: "test123"
+  image: "citusdata/citus:13.0.1"
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: false
+
+serviceAccount:
+  create: true
+
+service:
+  port: 8080
+  type: ClusterIP

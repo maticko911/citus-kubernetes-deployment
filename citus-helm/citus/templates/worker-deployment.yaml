@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citus-worker
+  labels:
+    app: citus
+    role: worker
+spec:
+  replicas: 2 #2 worker node
+  selector:
+    matchLabels:
+      app: citus
+      role: worker
+  template:
+    metadata:
+      labels:
+        app: citus
+        role: worker
+    spec:
+      containers:
+        - name: citus-worker
+          image: {{ .Values.worker.image }}
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "{{ .Values.worker.password }}"
+            - name: CITUS_MASTER_HOST
+              value: "citus-master-service"
