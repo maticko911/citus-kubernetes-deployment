@@ -21,26 +21,16 @@ Before deploying this Helm chart, ensure the following prerequisites are met:
 ## Repository Structure
 
 citus-helm/
-
 ├── citus/
-
-│   ├── Chart.yaml # Helm chart metadata
-
-│   ├── templates/          # Kubernetes manifest templates
-
-│   │   ├── master-deployment.yaml
-
-│   │   ├── master-service.yaml
-
-│   │   ├── worker-deployment.yaml
-
-│   │   └── worker-service.yaml
-   
-│   └── values.yaml         # Default configuration values
-
-└── init_database.sql       # SQL script for database initialization and sharding
-
-└── README.md
+│   ├── Chart.yaml              # Helm chart metadata
+│   ├── values.yaml             # Default configuration values
+│   └── templates/              # Kubernetes manifest templates
+│       ├── master-deployment.yaml
+│       ├── master-service.yaml
+│       ├── worker-deployment.yaml
+│       └── worker-service.yaml
+├── init_database.sql           # SQL script for database initialization and sharding
+└── README.md                   
 
 
 ## Deployment
