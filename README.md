@@ -29,8 +29,11 @@ citus-helm/
 │   ├── templates/          # Kubernetes manifest templates
 
 │   │   ├── master-deployment.yaml
+
 │   │   ├── master-service.yaml
+
 │   │   ├── worker-deployment.yaml
+
 │   │   └── worker-service.yaml
    
 │   └── values.yaml         # Default configuration values
