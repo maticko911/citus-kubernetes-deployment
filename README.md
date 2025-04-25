@@ -21,7 +21,9 @@ Before deploying this Helm chart, ensure the following prerequisites are met:
 ## Repository Structure
 
 citus-helm/
+
 ├── citus/
+
 │   ├── Chart.yaml          # Helm chart metadata
 │   ├── templates/          # Kubernetes manifest templates
 │   │   ├── master-deployment.yaml
